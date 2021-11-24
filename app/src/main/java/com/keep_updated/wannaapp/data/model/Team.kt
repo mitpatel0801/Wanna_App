@@ -6,11 +6,11 @@ data class Team(
     val abbr: String,
     val id: Int,
     @SerializedName("is_bet_team")
-    val isBetTeam: Int?,
+    val isBetTeam: Boolean?,
     @SerializedName("is_favored_team")
-    val isFavoredTeam: Int?,
+    val isFavoredTeam: Boolean?,
     @SerializedName("is_underdog_team")
-    val isUnderdogTeam: Int?,
+    val isUnderdogTeam: Boolean?,
     val logo: String,
     val name: String,
     @SerializedName("spread_points")

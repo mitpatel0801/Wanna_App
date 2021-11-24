@@ -6,7 +6,7 @@ data class Player(
     val id: Int,
     val image: String?,
     @SerializedName("username")
-    val userName: String,
+    val userName: String?,
     @SerializedName("total_draw")
     val totalDraw: Int?,
     @SerializedName("total_lose")

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_margin="5dp"
     android:layout_height="wrap_content"
@@ -122,7 +121,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_away_team_name" />
 
         <TextView
-            android:id="@+id/tv_better_"
+            android:id="@+id/tv_better_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
@@ -147,7 +146,7 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <TextView
-            android:id="@+id/tv_taker_"
+            android:id="@+id/tv_taker_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
@@ -169,10 +168,10 @@
             android:textAlignment="center"
             android:textColor="@color/purple"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/tv_better_"
+            app:layout_constraintEnd_toEndOf="@+id/tv_better_score"
             app:layout_constraintHorizontal_bias="0.526"
-            app:layout_constraintStart_toStartOf="@+id/tv_better_"
-            app:layout_constraintTop_toBottomOf="@+id/tv_better_" />
+            app:layout_constraintStart_toStartOf="@+id/tv_better_score"
+            app:layout_constraintTop_toBottomOf="@+id/tv_better_score" />
 
         <TextView
             android:id="@+id/textView11"
@@ -186,9 +185,9 @@
             android:textAlignment="center"
             android:textColor="@color/purple"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/tv_taker_"
+            app:layout_constraintEnd_toEndOf="@+id/tv_taker_score"
             app:layout_constraintHorizontal_bias="0.526"
-            app:layout_constraintStart_toStartOf="@+id/tv_taker_"
+            app:layout_constraintStart_toStartOf="@+id/tv_taker_score"
             app:layout_constraintTop_toTopOf="@+id/myCardView4" />
 
         <androidx.cardview.widget.CardView
@@ -197,9 +196,9 @@
             android:layout_height="80dp"
             android:layout_marginTop="3dp"
             app:cardCornerRadius="50dp"
-            app:layout_constraintEnd_toEndOf="@+id/tv_better_"
-            app:layout_constraintStart_toStartOf="@+id/tv_better_"
-            app:layout_constraintTop_toBottomOf="@+id/tv_better_">
+            app:layout_constraintEnd_toEndOf="@+id/tv_better_score"
+            app:layout_constraintStart_toStartOf="@+id/tv_better_score"
+            app:layout_constraintTop_toBottomOf="@+id/tv_better_score">
 
             <ImageView
                 android:id="@+id/im_better"
@@ -217,9 +216,9 @@
             android:layout_height="80dp"
             android:layout_marginTop="3dp"
             app:cardCornerRadius="50dp"
-            app:layout_constraintEnd_toEndOf="@+id/tv_taker_"
-            app:layout_constraintStart_toStartOf="@+id/tv_taker_"
-            app:layout_constraintTop_toBottomOf="@+id/tv_taker_">
+            app:layout_constraintEnd_toEndOf="@+id/tv_taker_score"
+            app:layout_constraintStart_toStartOf="@+id/tv_taker_score"
+            app:layout_constraintTop_toBottomOf="@+id/tv_taker_score">
 
             <ImageView
                 android:id="@+id/im_taker"
@@ -237,23 +236,22 @@
             app:layout_constraintEnd_toStartOf="@+id/myCardView4"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toEndOf="@+id/myCardView3"
-            app:layout_constraintTop_toTopOf="@+id/tv_better_"
+            app:layout_constraintTop_toTopOf="@+id/tv_better_score"
             app:layout_constraintVertical_bias="0.95"
             app:srcCompat="@drawable/padlock" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/tv_spread_point"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="24.5"
             android:textColor="@color/purple"
             android:textSize="50sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView2"
             app:layout_constraintEnd_toEndOf="@+id/imageView2"
-            app:layout_constraintHorizontal_bias="0.4"
             app:layout_constraintStart_toStartOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
         <TextView
             android:id="@+id/textView12"
@@ -261,8 +259,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="TOTAL GOALS"
-            app:layout_constraintEnd_toEndOf="@+id/textView9"
-            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintEnd_toEndOf="@+id/tv_spread_point"
+            app:layout_constraintStart_toStartOf="@+id/tv_spread_point"
             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
 

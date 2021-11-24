@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
@@ -34,7 +33,7 @@
             app:layout_constraintTop_toTopOf="@+id/tv_better_name" />
 
         <TextView
-            android:id="@+id/tv_better_"
+            android:id="@+id/tv_better_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="(22-17)"
@@ -43,7 +42,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_better_name" />
 
         <TextView
-            android:id="@+id/tv_taker_"
+            android:id="@+id/tv_taker_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="(22-17)"
@@ -84,7 +83,7 @@
             android:padding="5dp"
             app:layout_constraintEnd_toEndOf="@+id/tv_better_name"
             app:layout_constraintStart_toStartOf="@+id/tv_better_name"
-            app:layout_constraintTop_toBottomOf="@+id/tv_better_">
+            app:layout_constraintTop_toBottomOf="@+id/tv_better_score">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/myCardView1"
@@ -93,7 +92,7 @@
                 app:cardCornerRadius="50dp"
                 app:layout_constraintEnd_toEndOf="@+id/tv_better_name"
                 app:layout_constraintStart_toStartOf="@+id/tv_better_name"
-                app:layout_constraintTop_toBottomOf="@+id/tv_better_">
+                app:layout_constraintTop_toBottomOf="@+id/tv_better_score">
 
                 <ImageView
                     android:id="@+id/im_better_team"
@@ -104,7 +103,7 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/tv_better_score"
+                android:id="@+id/tv_better_team_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -123,7 +122,7 @@
             app:cardCornerRadius="50dp"
             app:layout_constraintEnd_toEndOf="@+id/tv_better_name"
             app:layout_constraintStart_toStartOf="@+id/tv_better_name"
-            app:layout_constraintTop_toBottomOf="@+id/tv_better_">
+            app:layout_constraintTop_toBottomOf="@+id/tv_better_score">
 
             <ImageView
                 android:id="@+id/im_better"
@@ -143,7 +142,7 @@
             android:padding="5dp"
             app:layout_constraintEnd_toEndOf="@+id/tv_taker_name"
             app:layout_constraintStart_toStartOf="@+id/tv_taker_name"
-            app:layout_constraintTop_toBottomOf="@+id/tv_taker_">
+            app:layout_constraintTop_toBottomOf="@+id/tv_taker_score">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/myCardView2"
@@ -152,7 +151,7 @@
                 app:cardCornerRadius="50dp"
                 app:layout_constraintEnd_toEndOf="@+id/tv_better_name"
                 app:layout_constraintStart_toStartOf="@+id/tv_better_name"
-                app:layout_constraintTop_toBottomOf="@+id/tv_better_">
+                app:layout_constraintTop_toBottomOf="@+id/tv_better_score">
 
                 <ImageView
                     android:id="@+id/im_taker_team"
@@ -163,7 +162,7 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/tv_taker_score"
+                android:id="@+id/tv_taker_team_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -182,7 +181,7 @@
             app:cardCornerRadius="50dp"
             app:layout_constraintEnd_toEndOf="@+id/tv_taker_name"
             app:layout_constraintStart_toStartOf="@+id/tv_taker_name"
-            app:layout_constraintTop_toBottomOf="@+id/tv_taker_">
+            app:layout_constraintTop_toBottomOf="@+id/tv_taker_score">
 
             <ImageView
                 android:id="@+id/im_taker"
@@ -208,6 +207,7 @@
             android:id="@+id/tv_match_point"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="1 - 4"
             android:textColor="@color/black"
             android:textSize="45sp"

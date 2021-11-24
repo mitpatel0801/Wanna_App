@@ -16,9 +16,9 @@ data class Event(
     val homeSettledScore: Int?,
     val id: Int?,
     @SerializedName("is_having_quarter")
-    val isHavingQuarter: Int?,
+    val isHavingQuarter: Boolean?,
     @SerializedName("is_having_regulation_time")
-    val isHavingRegulationTime: Int?,
+    val isHavingRegulationTime: Boolean?,
     val quarter: Int?,
     val scheduled: String?,
     @SerializedName("stat_id")

@@ -27,12 +27,12 @@
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             app:cardCornerRadius="50dp"
-            app:layout_constraintEnd_toEndOf="@+id/tv_better_name"
-            app:layout_constraintStart_toStartOf="@+id/tv_better_name"
+            app:layout_constraintEnd_toEndOf="@+id/tv_home_player_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_home_player_name"
             app:layout_constraintTop_toBottomOf="@+id/tv_time">
 
             <ImageView
-                android:id="@+id/im_away_team"
+                android:id="@+id/im_home_team"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -46,12 +46,12 @@
             android:layout_marginEnd="20dp"
             app:cardCornerRadius="50dp"
             app:layout_constraintBottom_toBottomOf="@+id/myCardView"
-            app:layout_constraintEnd_toEndOf="@+id/tv_taker_name"
-            app:layout_constraintStart_toStartOf="@+id/tv_taker_name"
+            app:layout_constraintEnd_toEndOf="@+id/tv_away_player_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_away_player_name"
             app:layout_constraintTop_toTopOf="@+id/myCardView">
 
             <ImageView
-                android:id="@+id/im_home_team"
+                android:id="@+id/im_away_team"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -87,7 +87,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/tv_away_team_name"
+            android:id="@+id/tv_home_team_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -98,7 +98,7 @@
             app:layout_constraintTop_toBottomOf="@+id/myCardView" />
 
         <TextView
-            android:id="@+id/tv_home_team_name"
+            android:id="@+id/tv_away_team_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -109,51 +109,51 @@
             app:layout_constraintTop_toBottomOf="@+id/myCardView2" />
 
         <TextView
-            android:id="@+id/tv_better_name"
+            android:id="@+id/tv_home_player_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="7dp"
             android:text="FootballGuy23"
-            app:layout_constraintEnd_toStartOf="@+id/tv_taker_name"
+            app:layout_constraintEnd_toStartOf="@+id/tv_away_player_name"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_away_team_name" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_team_name" />
 
         <TextView
-            android:id="@+id/tv_better_score"
+            android:id="@+id/tv_home_player_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
             android:text="(22-17)"
-            app:layout_constraintEnd_toEndOf="@+id/tv_better_name"
+            app:layout_constraintEnd_toEndOf="@+id/tv_home_player_name"
             app:layout_constraintHorizontal_bias="0.488"
-            app:layout_constraintStart_toStartOf="@+id/tv_better_name"
-            app:layout_constraintTop_toBottomOf="@+id/tv_better_name" />
+            app:layout_constraintStart_toStartOf="@+id/tv_home_player_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_player_name" />
 
         <TextView
-            android:id="@+id/tv_taker_name"
+            android:id="@+id/tv_away_player_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="116dp"
             android:layout_marginEnd="20dp"
             android:text="FootballGuy23"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_better_name"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_home_player_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/tv_better_name"
-            app:layout_constraintTop_toTopOf="@+id/tv_better_name"
+            app:layout_constraintStart_toEndOf="@+id/tv_home_player_name"
+            app:layout_constraintTop_toTopOf="@+id/tv_home_player_name"
             app:layout_constraintVertical_bias="1.0" />
 
         <TextView
-            android:id="@+id/tv_taker_score"
+            android:id="@+id/tv_away_player_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
             android:text="(22-17)"
-            app:layout_constraintEnd_toEndOf="@+id/tv_taker_name"
-            app:layout_constraintStart_toStartOf="@+id/tv_taker_name"
-            app:layout_constraintTop_toBottomOf="@+id/tv_taker_name" />
+            app:layout_constraintEnd_toEndOf="@+id/tv_away_player_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_away_player_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_away_player_name" />
 
 
         <TextView
@@ -168,10 +168,10 @@
             android:textAlignment="center"
             android:textColor="@color/purple"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/tv_better_score"
+            app:layout_constraintEnd_toEndOf="@+id/tv_home_player_score"
             app:layout_constraintHorizontal_bias="0.526"
-            app:layout_constraintStart_toStartOf="@+id/tv_better_score"
-            app:layout_constraintTop_toBottomOf="@+id/tv_better_score" />
+            app:layout_constraintStart_toStartOf="@+id/tv_home_player_score"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_player_score" />
 
         <TextView
             android:id="@+id/textView11"
@@ -185,9 +185,9 @@
             android:textAlignment="center"
             android:textColor="@color/purple"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/tv_taker_score"
+            app:layout_constraintEnd_toEndOf="@+id/tv_away_player_score"
             app:layout_constraintHorizontal_bias="0.526"
-            app:layout_constraintStart_toStartOf="@+id/tv_taker_score"
+            app:layout_constraintStart_toStartOf="@+id/tv_away_player_score"
             app:layout_constraintTop_toTopOf="@+id/myCardView4" />
 
         <androidx.cardview.widget.CardView
@@ -196,12 +196,12 @@
             android:layout_height="80dp"
             android:layout_marginTop="3dp"
             app:cardCornerRadius="50dp"
-            app:layout_constraintEnd_toEndOf="@+id/tv_better_score"
-            app:layout_constraintStart_toStartOf="@+id/tv_better_score"
-            app:layout_constraintTop_toBottomOf="@+id/tv_better_score">
+            app:layout_constraintEnd_toEndOf="@+id/tv_home_player_score"
+            app:layout_constraintStart_toStartOf="@+id/tv_home_player_score"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_player_score">
 
             <ImageView
-                android:id="@+id/im_better"
+                android:id="@+id/im__home_player"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -216,12 +216,12 @@
             android:layout_height="80dp"
             android:layout_marginTop="3dp"
             app:cardCornerRadius="50dp"
-            app:layout_constraintEnd_toEndOf="@+id/tv_taker_score"
-            app:layout_constraintStart_toStartOf="@+id/tv_taker_score"
-            app:layout_constraintTop_toBottomOf="@+id/tv_taker_score">
+            app:layout_constraintEnd_toEndOf="@+id/tv_away_player_score"
+            app:layout_constraintStart_toStartOf="@+id/tv_away_player_score"
+            app:layout_constraintTop_toBottomOf="@+id/tv_away_player_score">
 
             <ImageView
-                android:id="@+id/im_taker"
+                android:id="@+id/im_away_player"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -236,7 +236,7 @@
             app:layout_constraintEnd_toStartOf="@+id/myCardView4"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toEndOf="@+id/myCardView3"
-            app:layout_constraintTop_toTopOf="@+id/tv_better_score"
+            app:layout_constraintTop_toTopOf="@+id/tv_home_player_score"
             app:layout_constraintVertical_bias="0.95"
             app:srcCompat="@drawable/padlock" />
 

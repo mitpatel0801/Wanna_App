@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.keep_updated.wannaapp.data.model.Data
 import com.keep_updated.wannaapp.databinding.OverUnderBetListItemBinding
 import com.keep_updated.wannaapp.databinding.SpreadBetListItemBinding
+import java.text.DecimalFormat
 
 class BetAdapter(val context: Context, private var list: List<Data>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -64,21 +65,38 @@ class BetAdapter(val context: Context, private var list: List<Data>) :
         fun bind(data: Data) {
             with(data) {
 
-                //Player name
-                item.tvBetterName.text = data.better?.userName
-                item.tvTakerName.text = data.taker.userName
-
-                //Player images
-                Glide.with(context).load(better?.image).into(item.imBetter)
-                Glide.with(context).load(taker.image).into(item.imTaker)
+                if (homeTeam.isBetTeam == true) {
+                    //User Name
+                    item.tvHomePlayerName.text = better?.userName
+                    item.tvAwayPlayerName.text = taker.userName
+                    //Player Image
+                    Glide.with(context).load(better?.image).into(item.imHomePlayer)
+                    Glide.with(context).load(taker.image).into(item.imAwayPlayer)
+                    //Loss-Win
+                    item.tvHomePlayerScore.text =
+                        "(${data.better?.totalWin}-${data.better?.totalLose})"
+                    item.tvAwayPlayerName.text = "(${data.taker.totalWin}-${data.taker.totalLose})"
+                } else {
+                    //User Name
+                    item.tvHomePlayerName.text = taker.userName
+                    item.tvAwayPlayerName.text = better?.userName
+                    //Player Image
+                    Glide.with(context).load(taker.image).into(item.imHomePlayer)
+                    Glide.with(context).load(better?.image).into(item.imAwayPlayer)
+                    //Loss-Win
+                    item.tvHomePlayerScore.text =
+                        "(${data.taker.totalWin}-${data.taker.totalLose})"
+                    item.tvAwayPlayerName.text =
+                        "(${data.better?.totalWin}-${data.better?.totalLose})"
+                }
 
                 //Team name
-                item.tvBetterTeamName.text = data.awayTeam.name
-                item.tvTakerTeamName.text = data.homeTeam.name
+                item.tvAwayTeamName.text = data.awayTeam.name
+                item.tvHomeTeamName.text = data.homeTeam.name
 
                 //Team image
-                Glide.with(context).load(awayTeam.logo).into(item.imBetterTeam)
-                Glide.with(context).load(homeTeam.logo).into(item.imTakerTeam)
+                Glide.with(context).load(awayTeam.logo).into(item.imAwayTeam)
+                Glide.with(context).load(homeTeam.logo).into(item.imHomeTeam)
 
                 //Time
                 var time = ""
@@ -91,21 +109,19 @@ class BetAdapter(val context: Context, private var list: List<Data>) :
                 }
                 item.tvTime.text = time
 
-                //Loss-Win
-                item.tvBetterScore.text = "(${data.better?.totalWin}-${data.better?.totalLose})"
-                item.tvTakerScore.text = "(${data.taker.totalWin}-${data.taker.totalLose})"
 
                 //spread_points
-                item.tvBetterTeamScore.text = data.awayTeam.spreadPoints
-                item.tvTakerTeamScore.text = data.homeTeam.spreadPoints
+                item.tvAwayTeamScore.text = data.awayTeam.spreadPoints
+                item.tvHomeTeamScore.text = data.homeTeam.spreadPoints
 
                 //Match Score
                 item.tvMatchPoint.text =
                     "${data.event.awayScore}-${data.event.homeScore}"
 
                 //Bet Values
-                item.tvBetAmount.text = data.betAmount.toString()
-                item.tvBetTotalAmount.text = "PAYS:${data.betAmount * data.betValue}"
+                val df = DecimalFormat("0.00")
+                item.tvBetAmount.text = df.format(data.betAmount)
+                item.tvBetTotalAmount.text = "PAYS:${df.format(data.betAmount * 1.90)}"
             }
         }
     }
@@ -126,24 +142,38 @@ class BetAdapter(val context: Context, private var list: List<Data>) :
                 Glide.with(context).load(awayTeam.logo).into(item.imAwayTeam)
                 Glide.with(context).load(homeTeam.logo).into(item.imHomeTeam)
 
-                //Player name
-                item.tvBetterName.text = data.better?.userName
-                item.tvTakerName.text = data.taker.userName
-
-                //Player images
-                Glide.with(context).load(better?.image).into(item.imBetter)
-                Glide.with(context).load(taker.image).into(item.imTaker)
-
-                //Loss-Win
-                item.tvBetterScore.text = "(${data.better?.totalWin}-${data.better?.totalLose})"
-                item.tvTakerScore.text = "(${data.taker.totalWin}-${data.taker.totalLose})"
+                if (homeTeam.isBetTeam == true) {
+                    //User Name
+                    item.tvHomePlayerName.text = better?.userName
+                    item.tvAwayPlayerName.text = taker.userName
+                    //Player Image
+                    Glide.with(context).load(better?.image).into(item.imHomePlayer)
+                    Glide.with(context).load(taker.image).into(item.imAwayPlayer)
+                    //Loss-Win
+                    item.tvHomePlayerScore.text =
+                        "(${data.better?.totalWin}-${data.better?.totalLose})"
+                    item.tvAwayPlayerName.text = "(${data.taker.totalWin}-${data.taker.totalLose})"
+                } else {
+                    //User Name
+                    item.tvHomePlayerName.text = taker.userName
+                    item.tvAwayPlayerName.text = better?.userName
+                    //Player Image
+                    Glide.with(context).load(taker.image).into(item.imHomePlayer)
+                    Glide.with(context).load(better?.image).into(item.imAwayPlayer)
+                    //Loss-Win
+                    item.tvHomePlayerScore.text =
+                        "(${data.taker.totalWin}-${data.taker.totalLose})"
+                    item.tvAwayPlayerName.text =
+                        "(${data.better?.totalWin}-${data.better?.totalLose})"
+                }
 
                 //spread_points
                 item.tvSpreadPoint.text = data.homeTeam.spreadPoints
 
                 //Bet Values
-                item.tvBetAmount.text = data.betAmount.toString()
-                item.tvBetTotalAmount.text = "PAYS:${data.betAmount * data.betValue}"
+                val df = DecimalFormat("0.00")
+                item.tvBetAmount.text = df.format(data.betAmount)
+                item.tvBetTotalAmount.text = "PAYS:${df.format(data.betAmount * 1.90)}"
             }
 
         }

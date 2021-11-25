@@ -3,7 +3,7 @@ package com.keep_updated.wannaapp.data.model
 import com.google.gson.annotations.SerializedName
 
 data class Team(
-    val abbr: String,
+    val abbr: String?,
     val id: Int,
     @SerializedName("is_bet_team")
     val isBetTeam: Boolean?,
@@ -11,14 +11,14 @@ data class Team(
     val isFavoredTeam: Boolean?,
     @SerializedName("is_underdog_team")
     val isUnderdogTeam: Boolean?,
-    val logo: String,
-    val name: String,
+    val logo: String?,
+    val name: String?,
     @SerializedName("spread_points")
-    val spreadPoints: String,
+    val spreadPoints: String?,
     @SerializedName("stat_id")
-    val stateId: Int,
+    val stateId: Int?,
     @SerializedName("stat_provider")
-    val statProvider: String,
+    val statProvider: String?,
     @SerializedName("total_draw")
     val totalDraw: Int?,
     @SerializedName("total_lose")

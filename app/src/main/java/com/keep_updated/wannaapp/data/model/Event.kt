@@ -3,18 +3,18 @@ package com.keep_updated.wannaapp.data.model
 import com.google.gson.annotations.SerializedName
 
 data class Event(
+    val id: Int,
     @SerializedName("away_score")
-    val awayScore: Int,
+    val awayScore: Int?,
     @SerializedName("away_settled_score")
     val awaySettledScore: Int?,
     val clock: String?,
     @SerializedName("game_status")
-    val gameStatus: String,
+    val gameStatus: String?,
     @SerializedName("home_score")
     val homeScore: Int?,
     @SerializedName("home_settled_score")
     val homeSettledScore: Int?,
-    val id: Int?,
     @SerializedName("is_having_quarter")
     val isHavingQuarter: Boolean?,
     @SerializedName("is_having_regulation_time")
